@@ -1,0 +1,29 @@
+.search-bar {
+  background-color: white;
+  display: flex;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  width: fit-content;
+
+  .search-icon {
+    padding: 18px 22px;
+  }
+
+  .search-input {
+    border: none;
+    font-size: 1rem;
+    width: 400px;
+
+    &:focus { border:none; outline: none; }
+    &::placeholder { color: #4F4F4F; }
+  }
+
+  .search-btn {
+    background-color: #5A3D5C;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: 16px 21px;
+
+    img { width: 1.4rem; }
+  }
+}
