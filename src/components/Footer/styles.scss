@@ -1,0 +1,13 @@
+footer {
+  width: 100%;
+  padding: 1rem 0;
+
+  address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    a { margin: 10px; }
+    img { width: 2rem; }
+  }
+}
