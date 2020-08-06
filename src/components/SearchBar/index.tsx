@@ -5,18 +5,18 @@ import octocat from '../../img/octocat.svg';
 
 interface SearchBarProps {
   hideButton?: boolean;
-  searchHandler?: (value: string) => void;
+  onSearch?: (value: string) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ 
   hideButton = false, 
-  searchHandler = () => {}
+  onSearch = () => {}
 }) => {
   const [text, setText] = useState('');
 
   const keyUpHandler: KeyboardEventHandler = (e) => {
     if (e.key !== 'Enter') return;
-    searchHandler(text); 
+    onSearch(text); 
   }
 
   return (
@@ -31,7 +31,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         onKeyUp={keyUpHandler}
       />
       {!hideButton && (
-        <button className="search-btn" onClick={() => searchHandler(text)}>
+        <button className="search-btn" onClick={() => onSearch(text)}>
           <img src={octocat} alt="Octocat icon"  />  
         </button>
       )}

@@ -23,7 +23,7 @@ function Header() {
     <header>
       <img src={logo} alt="Bitwise logo" />
       { currentPath !== '/' && (
-        <SearchBar hideButton searchHandler={alert} />
+        <SearchBar hideButton onSearch={alert} />
       )}
       <Socials socials={socials} />
     </header>
