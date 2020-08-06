@@ -4,12 +4,16 @@ import './App.scss';
 
 import HomePage from './pages/Home';
 import Header from './components/Header';
+import SearchResultPage from './pages/SearchResult';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Route to="/">
+      <Route path="/search/:name">
+        <SearchResultPage />
+      </Route>
+      <Route exact path="/">
         <HomePage />
       </Route>
     </div>
