@@ -1,3 +1,10 @@
 header {
   padding: 40px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .search-bar {
+    margin-left: 2rem;
+  }
 }
