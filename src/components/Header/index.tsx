@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import './styles.scss';
 import SearchBar from '../SearchBar';
 import Socials from '../Socials';
@@ -11,7 +11,12 @@ import Social from '../../interfaces/Social.interface';
 
 function Header() {
   const location = useLocation();
+  const history = useHistory();
   const { pathname: currentPath } = location;
+
+  const searchHandler = (username: string) => {
+    history.push(`/search/${username}`);
+  }
 
   const socials: Social[] = [
     { name: "Instagram", link: "#", iconUrl: instagram },
@@ -23,7 +28,7 @@ function Header() {
     <header>
       <img src={logo} alt="Bitwise logo" />
       { currentPath !== '/' && (
-        <SearchBar hideButton onSearch={alert} />
+        <SearchBar hideButton onSearch={searchHandler} />
       )}
       <Socials socials={socials} />
     </header>

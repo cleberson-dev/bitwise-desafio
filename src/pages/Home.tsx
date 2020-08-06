@@ -3,8 +3,14 @@ import SearchBar from '../components/SearchBar';
 import Footer from '../components/Footer';
 import polygonImg from '../img/polygon.png';
 import illustration from '../img/illustration.svg';
+import { useHistory } from 'react-router-dom';
 
 function HomePage() {
+  const history = useHistory();
+
+  const searchHandler = (username: string) => {
+    history.push(`/search/${username}`);
+  }
 
   return (
     <>
@@ -16,7 +22,7 @@ function HomePage() {
               Buscar um usuário no <strong>Github</strong>
               <br /> ficou muito <strong>fácil!</strong>
             </p>
-            <SearchBar onSearch={alert} />
+            <SearchBar onSearch={searchHandler} />
           </div>
           <img src={illustration} alt='Illustration' />
         </div>

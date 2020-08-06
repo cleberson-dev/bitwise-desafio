@@ -16,7 +16,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
   const keyUpHandler: KeyboardEventHandler = (e) => {
     if (e.key !== 'Enter') return;
-    onSearch(text); 
+    onSearch(text);
+    setText('');
   }
 
   return (
