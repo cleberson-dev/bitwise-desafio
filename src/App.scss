@@ -30,11 +30,10 @@ code {
       margin-top: 1rem;
     }
   }
-}
-
-.App .polygon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 64vw;
+  .polygon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64vw;
+  }
 }
