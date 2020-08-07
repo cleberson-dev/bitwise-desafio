@@ -3,4 +3,5 @@ export default interface Repo {
   commitsCount: number;
   lastCommitMessage: string;
   lastCommitHash: string;
+  url: string;
 }
