@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.scss';
+import SVGIcon from '../SVGIcon';
 import Social from '../../interfaces/Social.interface';
 
 interface SocialsProps {
@@ -11,7 +12,12 @@ const Socials: React.FC<SocialsProps> = ({ socials }) => {
     <address className="social-links">
       {socials.map(social => (
         <a href={social.link}>
-          <img src={social.iconUrl} alt={`Ícone: ${social.name}`} />
+          <SVGIcon 
+            src={social.iconUrl}
+            size={social.iconSize}
+            color={social.iconColor}
+          />
+          {/* <img src={social.iconUrl} alt={`Ícone: ${social.name}`} /> */}
         </a>
       ))}
     </address>

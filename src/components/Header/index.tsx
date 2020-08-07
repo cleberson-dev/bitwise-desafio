@@ -18,10 +18,11 @@ function Header() {
     history.push(`/search/${username}`);
   }
 
+  const iconSize = 2;
   const socials: Social[] = [
-    { name: "Instagram", link: "#", iconUrl: instagram },
-    { name: "Linkedin", link: "#", iconUrl: linkedin },
-    { name: "Medium", link: "#", iconUrl: medium },
+    { name: "Instagram", link: "#", iconUrl: instagram, iconSize },
+    { name: "Linkedin", link: "#", iconUrl: linkedin, iconSize },
+    { name: "Medium", link: "#", iconUrl: medium, iconSize },
   ];
 
   return (

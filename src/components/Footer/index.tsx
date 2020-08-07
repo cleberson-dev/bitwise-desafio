@@ -8,10 +8,12 @@ import medium from "../../img/social/medium.svg";
 import pinkLogo from '../../img/pink-logo.svg';
 
 function Footer() {
+  const iconColor = '#fd71ea';
+  const iconSize = 2;
   const socials: Social[] = [
-    { name: "Instagram", link: "#", iconUrl: instagram },
-    { name: "Linkedin", link: "#", iconUrl: linkedin },
-    { name: "Medium", link: "#", iconUrl: medium },
+    { name: "Instagram", link: "#", iconUrl: instagram, iconSize, iconColor },
+    { name: "Linkedin", link: "#", iconUrl: linkedin, iconSize, iconColor },
+    { name: "Medium", link: "#", iconUrl: medium, iconSize, iconColor },
   ];
 
   return (
