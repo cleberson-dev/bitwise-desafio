@@ -3,11 +3,10 @@ import { useHistory } from "react-router-dom";
 import "./styles.scss";
 import SearchBar from "../../components/SearchBar";
 import Socials from "../../components/Socials";
+import Social from "../../interfaces/Social.interface";
+import socialContacts from '../../socials';
 import polygonImg from "../../img/polygon.png";
 import illustration from "../../img/illustration.svg";
-import instagram from "../../img/social/instagram.svg";
-import linkedin from "../../img/social/linkedin.svg";
-import medium from "../../img/social/medium.svg";
 
 function HomePage() {
   const history = useHistory();
@@ -18,11 +17,9 @@ function HomePage() {
 
   const iconSize = 2;
   const iconColor = '#fd71ea';
-  const socials = [
-    { name: "Instagram", link: "#", iconUrl: instagram, iconSize, iconColor },
-    { name: "Linkedin", link: "#", iconUrl: linkedin, iconSize, iconColor },
-    { name: "Medium", link: "#", iconUrl: medium, iconSize, iconColor },
-  ];
+  const socials: Social[] = socialContacts.map(social => ({
+    ...social, iconSize, iconColor 
+  }));
 
   return (
     <main>

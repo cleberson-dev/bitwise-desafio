@@ -4,9 +4,8 @@ import './styles.scss';
 import SearchBar from '../SearchBar';
 import Socials from '../Socials';
 import logo from '../../img/logo.png';
-import instagram from "../../img/social/instagram.svg";
-import linkedin from "../../img/social/linkedin.svg";
-import medium from "../../img/social/medium.svg";
+import socialContacts from '../../socials';
+
 import Social from '../../interfaces/Social.interface';
 
 function Header() {
@@ -20,11 +19,9 @@ function Header() {
 
   const iconSize = 2;
   const iconColor = '#fd71ea';
-  const socials: Social[] = [
-    { name: "Instagram", link: "#", iconUrl: instagram, iconSize, iconColor },
-    { name: "Linkedin", link: "#", iconUrl: linkedin, iconSize, iconColor },
-    { name: "Medium", link: "#", iconUrl: medium, iconSize, iconColor },
-  ];
+  const socials: Social[] = socialContacts.map(social => ({
+    ...social, iconSize, iconColor 
+  }));
 
   return (
     <header>
