@@ -71,11 +71,6 @@ function SearchResult() {
           name={data.user.name}
           reposCount={data.user.repositories.totalCount}
         />
-        {/* <UserInfo 
-          avatar='https://avatars2.githubusercontent.com/u/26855833?v=4'
-          name='Cleberson F R Junior'
-          reposCount={27}
-        /> */}
         <ReposTable repos={repos} />
       </main>
     </>
