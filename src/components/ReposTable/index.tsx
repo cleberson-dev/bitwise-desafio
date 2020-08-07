@@ -13,7 +13,7 @@ const ReposTable: React.FC<ReposTableProps> = ({ repos }) => {
     <table className="repos-table">
       <thead>
         <tr>
-          <th colSpan={4} className="table-title">Título</th>
+          <th colSpan={4} className="table-title">Repositórios criados e com participação</th>
         </tr>
         <tr>
           <th>Nome do repositório</th>
