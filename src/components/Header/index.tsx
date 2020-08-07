@@ -19,10 +19,11 @@ function Header() {
   }
 
   const iconSize = 2;
+  const iconColor = '#fd71ea';
   const socials: Social[] = [
-    { name: "Instagram", link: "#", iconUrl: instagram, iconSize },
-    { name: "Linkedin", link: "#", iconUrl: linkedin, iconSize },
-    { name: "Medium", link: "#", iconUrl: medium, iconSize },
+    { name: "Instagram", link: "#", iconUrl: instagram, iconSize, iconColor },
+    { name: "Linkedin", link: "#", iconUrl: linkedin, iconSize, iconColor },
+    { name: "Medium", link: "#", iconUrl: medium, iconSize, iconColor },
   ];
 
   return (
@@ -31,9 +32,11 @@ function Header() {
         <img src={logo} alt="Bitwise logo" />
       </a>
       { currentPath !== '/' && (
-        <SearchBar hideButton onSearch={searchHandler} />
+        <>
+          <SearchBar hideButton onSearch={searchHandler} />
+          <Socials socials={socials} />
+        </>
       )}
-      <Socials socials={socials} />
     </header>
   );
 }
