@@ -1,8 +1,9 @@
 import React from 'react';
-import SearchBar from '../components/SearchBar';
-import Footer from '../components/Footer';
-import polygonImg from '../img/polygon.png';
-import illustration from '../img/illustration.svg';
+import './styles.scss';
+import SearchBar from '../../components/SearchBar';
+import Footer from '../../components/Footer';
+import polygonImg from '../../img/polygon.png';
+import illustration from '../../img/illustration.svg';
 import { useHistory } from 'react-router-dom';
 
 function HomePage() {

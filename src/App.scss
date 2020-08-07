@@ -21,27 +21,4 @@ code {
   * {
     z-index: 2;
   }
-
-  .intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px;
-
-    p { font-size: 2.5rem; }
-    .left .search-bar {
-      margin-top: 1rem;
-    }
-  }
-  .polygon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 64vw;
-    z-index: 1;
-  }
-}
-
-.svg-icon {
-  width: 2rem;
 }

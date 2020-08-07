@@ -1,0 +1,18 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  min-height: 100vh;
+
+  .search-bar { margin-top: 1rem; }
+  p { font-size: 2.5rem; }
+}
+
+.polygon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 64vw;
+  z-index: 1;
+}
