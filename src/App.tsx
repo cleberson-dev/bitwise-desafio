@@ -5,6 +5,7 @@ import './App.scss';
 import HomePage from './pages/Home';
 import Header from './components/Header';
 import SearchResultPage from './pages/SearchResult';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Route exact path="/">
         <HomePage />
       </Route>
+      <Footer />
     </div>
   );
 }
