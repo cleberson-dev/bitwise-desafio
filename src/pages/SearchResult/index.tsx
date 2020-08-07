@@ -5,6 +5,7 @@ import './styles.scss';
 import UserInfo from '../../components/UserInfo';
 import ReposTable from '../../components/ReposTable';
 import Repo from '../../interfaces/Repo.interface';
+import Spinner from 'react-spinkit';
 
 const query = gql`
   query ($username: String!) { 
@@ -52,7 +53,11 @@ function SearchResult() {
     variables: { username }
   });
 
-  if (loading) return <div>Carregando...</div>;
+  if (loading) return (
+    <div className="loading">
+      <Spinner name="line-scale-pulse-out" color="#382039" fadeIn="quarter" />
+    </div>
+  );
   if (error) console.error(error);
 
   const repos: Repo[] = data.user.repositories.nodes.map((repo: any) => ({
