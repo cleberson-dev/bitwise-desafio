@@ -27,7 +27,9 @@ function Header() {
 
   return (
     <header>
-      <img src={logo} alt="Bitwise logo" />
+      <a href="/">
+        <img src={logo} alt="Bitwise logo" />
+      </a>
       { currentPath !== '/' && (
         <SearchBar hideButton onSearch={searchHandler} />
       )}
