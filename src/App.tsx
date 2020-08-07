@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Route path="/search/:name">
+      <Route path="/search/:username">
         <SearchResultPage />
       </Route>
       <Route exact path="/">
