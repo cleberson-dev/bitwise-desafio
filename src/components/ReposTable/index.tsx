@@ -25,7 +25,7 @@ const ReposTable: React.FC<ReposTableProps> = ({ repos }) => {
       <tbody>
         {repos.map(repo => (
           <tr>
-            <td>{repo.name}</td>
+            <td><a href={repo.url}>{repo.name}</a></td>
             <td>{repo.commitsCount}</td>
             <td>{repo.lastCommitMessage}</td>
             <td>{repo.lastCommitHash}</td>

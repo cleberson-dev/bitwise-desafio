@@ -6,6 +6,15 @@
   text-align: left;
   border-collapse: collapse;
   font-size: 0.9rem;
+
+  a {
+    color: #3D5879;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
   
   .table-title {
     font-size: 1.3rem;
@@ -46,6 +55,9 @@
     border-bottom: 1px solid #D4DAE4;
   }
 
-
-  th, td { padding: 25px; }
+  th, td { 
+    padding: 25px;
+    overflow-x: hidden;
+    text-overflow: ellipsis; 
+  }
 }
