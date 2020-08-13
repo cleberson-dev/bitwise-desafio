@@ -17,7 +17,6 @@ const Socials: React.FC<SocialsProps> = ({ socials }) => {
             size={social.iconSize}
             color={social.iconColor}
           />
-          {/* <img src={social.iconUrl} alt={`Ícone: ${social.name}`} /> */}
         </a>
       ))}
     </address>
